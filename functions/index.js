@@ -1,3 +1,5 @@
+'use strict';
+
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const express = require('express');
@@ -39,6 +41,7 @@ const authenticate = async (req, res, next) => {
     return;
   }
 };
+
 app.use(authenticate);
 
 // Take the text parameter passed to this HTTP endpoint and insert it into the
